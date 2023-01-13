@@ -1,0 +1,20 @@
+﻿@using OAuth2.Controllers;
+@{
+    ViewData["Title"] = "Privacy Policy";
+
+    var val = ViewData["value"] as kakaoTest;
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+
+<p>@val.token_type</p>
+<p>@val.id_token</p>
+<p>@val.access_token</p>
+<p>@val.expires_in</p>
+<p>@val.refresh_token</p>
+<p>@val.refresh_token_expires_in</p>
+<p>@val.scope</p>
+
+<a href="/Home/KakaoLogout?ACCESS_TOKEN=@val.access_token">로그아웃</a>
